@@ -1,4 +1,4 @@
-# IB Operations Daily Task Summary
+# Daily Task Summary
 
 A small Python program that reads a list of tasks from a spreadsheet (CSV file),
 counts how many are **Completed** and how many are **Pending**, and saves a
