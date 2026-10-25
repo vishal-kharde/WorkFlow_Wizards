@@ -31,7 +31,7 @@ def main():
 
     # Step 3: Display the summary.
     summary = (
-        "DAILY OPERATIONS TASK SUMMARY\n"
+        "IB OPS DAILY OPERATIONS TASK SUMMARY\n"
         "=============================\n"
         f"Total tasks: {total_tasks}\n"
         f"Completed tasks: {completed_tasks}\n"
