@@ -1,0 +1,20 @@
+IB OPS DATA PROCESSING SUMMARY
+================================
+Input File: /mnt/data/ib_ops_automation_project/data/sample_tasks.csv
+Input Records: 14
+Valid Records: 8
+Rejected Records: 6
+Inserted This Run: 8
+Already In Database: 0
+Total Tasks In Database: 8
+Total Amount Usd In Database: 889200.5
+Processing Seconds: 0.081
+Database: /mnt/data/ib_ops_automation_project/output/ib_ops.db
+Exceptions File: /mnt/data/ib_ops_automation_project/output/exceptions.csv
+Log File: /mnt/data/ib_ops_automation_project/logs/processing.log
+
+Database status breakdown:
+- Completed: 2
+- In Progress: 2
+- New: 3
+- On Hold: 1

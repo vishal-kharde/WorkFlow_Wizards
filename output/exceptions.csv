@@ -1,0 +1,7 @@
+task_id,trade_date,team,task_type,status,priority,owner,amount_usd,notes,error_reason
+OPS-1009,2026-10-22,Settlements,Settlement Check,New,Medium,Asha,not-a-number,Intentional test error: invalid amount,amount_usd must be a number
+OPS-1010,2026-10-22,Reconciliations,Cash Reconciliation,,Medium,Rohan,56000,Intentional test error: missing status,Missing status
+OPS-1002,2026-10-22,Settlements,Trade Confirmation,New,Low,Meera,11000,Intentional test error: duplicate ID in file,Duplicate task_id in input file
+OPS-1012,22-10-2026,Corporate Actions,Event Validation,New,High,Arjun,44000,Intentional test error: incorrect date format,Invalid trade_date; expected YYYY-MM-DD
+OPS-1013,2026-10-22,Settlements,Settlement Check,Unknown,Low,Asha,25000,Intentional test error: invalid status,Invalid status: Unknown
+OPS-1014,2026-10-22,Reconciliations,Position Reconciliation,New,High,Rohan,-100,Intentional test error: negative amount,amount_usd cannot be negative

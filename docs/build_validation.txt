@@ -1,0 +1,38 @@
+Pipeline summary:
+{
+  "input_file": "/mnt/data/ib_ops_automation_project/data/sample_tasks.csv",
+  "input_records": 14,
+  "valid_records": 8,
+  "rejected_records": 6,
+  "inserted_this_run": 8,
+  "already_in_database": 0,
+  "total_tasks_in_database": 8,
+  "total_amount_usd_in_database": 889200.5,
+  "processing_seconds": 0.081,
+  "database": "/mnt/data/ib_ops_automation_project/output/ib_ops.db",
+  "exceptions_file": "/mnt/data/ib_ops_automation_project/output/exceptions.csv",
+  "log_file": "/mnt/data/ib_ops_automation_project/logs/processing.log"
+}
+
+Unit test return code: 0
+STDOUT:
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
+test_database_load_is_idempotent_for_existing_id (test_pipeline.PipelineTests.test_database_load_is_idempotent_for_existing_id) ... SKIPPED existing task_id=T-1
+ok
+test_validation_separates_valid_and_rejected (test_pipeline.PipelineTests.test_validation_separates_valid_and_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.025s
+
+OK

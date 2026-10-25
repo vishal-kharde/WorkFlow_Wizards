@@ -1,0 +1,15 @@
+task_id,trade_date,team,task_type,status,priority,owner,amount_usd,notes
+OPS-1001,2026-10-20,Settlements,Trade Confirmation,New,High,Asha,125000.50,Awaiting counterparty confirmation
+OPS-1002,2026-10-20,Reconciliations,Cash Reconciliation,In Progress,Medium,Rohan,98000,Investigating a small break
+OPS-1003,2026-10-20,Settlements,Settlement Check,Completed,Low,Meera,240000,Completed within SLA
+OPS-1004,2026-10-21,Corporate Actions,Event Validation,On Hold,Critical,Arjun,76000,Awaiting supporting document
+OPS-1005,2026-10-21,Reconciliations,Position Reconciliation,New,High,Asha,151200,Daily position check
+OPS-1006,2026-10-21,Settlements,Trade Confirmation,In Progress,Medium,Rohan,42500,Follow up with counterparty
+OPS-1007,2026-10-21,Corporate Actions,Event Validation,Completed,Low,Meera,67500,Validation complete
+OPS-1008,2026-10-22,Reconciliations,Cash Reconciliation,New,High,Arjun,89000,Review pending
+OPS-1009,2026-10-22,Settlements,Settlement Check,New,Medium,Asha,not-a-number,Intentional test error: invalid amount
+OPS-1010,2026-10-22,Reconciliations,Cash Reconciliation,,Medium,Rohan,56000,Intentional test error: missing status
+OPS-1002,2026-10-22,Settlements,Trade Confirmation,New,Low,Meera,11000,Intentional test error: duplicate ID in file
+OPS-1012,22-10-2026,Corporate Actions,Event Validation,New,High,Arjun,44000,Intentional test error: incorrect date format
+OPS-1013,2026-10-22,Settlements,Settlement Check,Unknown,Low,Asha,25000,Intentional test error: invalid status
+OPS-1014,2026-10-22,Reconciliations,Position Reconciliation,New,High,Rohan,-100,Intentional test error: negative amount
