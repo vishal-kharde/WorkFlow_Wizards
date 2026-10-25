@@ -1,23 +1,50 @@
-"""Command-line entry point for the IB Ops Data Processing Automation project."""
-import argparse
+"""Beginner project: read a task CSV and count task statuses."""
+import csv
 from pathlib import Path
-from src.ops_automation import run_pipeline
+
+INPUT_FILE = Path("data/tasks.csv")
+OUTPUT_FILE = Path("output/daily_summary.txt")
+
 
 def main():
-    parser = argparse.ArgumentParser(description="Validate an IB Ops CSV and load valid tasks into SQLite.")
-    parser.add_argument("--input", default="data/sample_tasks.csv", help="Path to input CSV file")
-    parser.add_argument("--db", default="output/ib_ops.db", help="Path to SQLite database")
-    parser.add_argument("--output-dir", default="output", help="Directory for reports and exception files")
-    args = parser.parse_args()
+    # Step 1: Make sure the input file exists.
+    if not INPUT_FILE.exists():
+        print(f"Could not find {INPUT_FILE}. Check that you are in the project folder.")
+        return
 
-    summary = run_pipeline(
-        input_path=Path(args.input),
-        db_path=Path(args.db),
-        output_dir=Path(args.output_dir),
+    # Step 2: Read each row from the CSV file.
+    total_tasks = 0
+    completed_tasks = 0
+    pending_tasks = 0
+
+    with INPUT_FILE.open("r", newline="", encoding="utf-8-sig") as file:
+        reader = csv.DictReader(file)
+
+        for row in reader:
+            total_tasks += 1
+            status = row["Status"].strip().lower()
+
+            if status == "completed":
+                completed_tasks += 1
+            elif status == "pending":
+                pending_tasks += 1
+
+    # Step 3: Display the summary.
+    summary = (
+        "DAILY OPERATIONS TASK SUMMARY\n"
+        "=============================\n"
+        f"Total tasks: {total_tasks}\n"
+        f"Completed tasks: {completed_tasks}\n"
+        f"Pending tasks: {pending_tasks}\n"
     )
-    print("\n=== IB Ops Automation Summary ===")
-    for key, value in summary.items():
-        print(f"{key.replace('_', ' ').title()}: {value}")
+
+    print(summary)
+
+    # Step 4: Save the same summary to a text file.
+    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    OUTPUT_FILE.write_text(summary, encoding="utf-8")
+    print(f"Summary saved to: {OUTPUT_FILE}")
+
 
 if __name__ == "__main__":
     main()

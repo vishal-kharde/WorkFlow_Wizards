@@ -1,63 +1,32 @@
-# IB Ops Data Processing & Reconciliation Automation
+# Daily Operations Task Tracker — Beginner Python Project
 
-A beginner-friendly four-week internship project demonstrating how Python can automate repetitive operations data processing using synthetic CSV data.
+## What does it do?
+It reads a simple CSV spreadsheet of operations tasks, counts how many are completed and pending, prints a summary, and saves the summary to a text file.
 
-## Features
-- Reads a CSV using pandas
-- Cleans whitespace and normalizes known status/priority values
-- Validates required fields, dates, status, priority and numeric amounts
-- Rejects invalid records with explanations
-- Loads valid records into a SQLite database
-- Prevents duplicate task IDs from being inserted twice
-- Creates an audit table and a log file
-- Generates an exception CSV and a summary report
-- Includes automated unit tests and a data mapping document
+No database or advanced Python library is required. The project uses Python's built-in `csv` module.
 
-## Quick start
-```bash
-python -m venv .venv
-# Windows PowerShell:
-.venv\Scripts\Activate.ps1
-# macOS/Linux:
-# source .venv/bin/activate
-pip install -r requirements.txt
-python main.py
-```
+## What you need
+- Python 3.10 or newer
+- IntelliJ IDEA with Python support, or another Python editor
+- The files in this folder
 
-Read `docs/setup_guide.md` for detailed setup instructions.
+## Run it
+1. Open this project folder in your editor.
+2. Open the terminal in the project folder.
+3. Run:
 
-## Run tests
-```bash
-python -m unittest discover -s tests -v
-```
+   `python main.py`
 
-## Project structure
-```text
-ib_ops_automation_project/
-├── main.py
-├── src/
-│   ├── __init__.py
-│   └── ops_automation.py
-├── data/
-│   └── sample_tasks.csv
-├── output/                 # generated database and reports
-├── logs/                   # generated processing log
-├── tests/
-│   └── test_pipeline.py
-├── docs/
-│   ├── data_mapping.md
-│   ├── setup_guide.md
-│   └── final_presentation_outline.md
-└── requirements.txt
-```
+4. Read the summary in the terminal.
+5. Open `output/daily_summary.txt` to see the saved report.
 
-## Four-week learning plan
-- Week 1: Set up Python, inspect the sample file, run a basic script and explain the workflow.
-- Week 2: Document the mapping, clean data, and explain validation rules.
-- Week 3: Load data to SQLite, add logging, exception reports and tests.
-- Week 4: Run edge-case tests, document results, demonstrate the workflow and present measured impact.
+## Input file
+Open `data/tasks.csv` in Excel or another spreadsheet application. Each row represents one task. The `Status` column should contain `Completed` or `Pending`.
 
-## Demo caveats
-The sample file deliberately contains invalid rows. The pipeline should reject those rows and explain why. The first run creates the database; a second run skips task IDs already stored in the database.
+## Try changing the data
+- Add another task row and run the program again.
+- Change a task from Pending to Completed.
+- Compare the summary before and after your change.
 
-This is an educational prototype. Use only synthetic data. Do not connect it to bank systems or use confidential or customer information.
+## Important
+This is a learning prototype using fictional sample data. Do not use real customer, account, transaction, or confidential bank information.
