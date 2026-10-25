@@ -1,32 +1,56 @@
-# Daily Operations Task Tracker — Beginner Python Project
+# IB Operations Daily Task Summary
 
-## What does it do?
-It reads a simple CSV spreadsheet of operations tasks, counts how many are completed and pending, prints a summary, and saves the summary to a text file.
+A small Python program that reads a list of tasks from a spreadsheet (CSV file),
+counts how many are **Completed** and how many are **Pending**, and saves a
+summary to a text file.
 
-No database or advanced Python library is required. The project uses Python's built-in `csv` module.
+You don't need to install anything extra. Python comes with everything this
+program needs.
 
-## What you need
-- Python 3.10 or newer
-- IntelliJ IDEA with Python support, or another Python editor
-- The files in this folder
+---
 
-## Run it
-1. Open this project folder in your editor.
-2. Open the terminal in the project folder.
-3. Run:
+## What You Need
 
-   `python main.py`
+| Item | Details |
+|------|---------|
+| A computer | Windows, Mac, or Linux |
+| Python | Version 3.6 or newer (free from python.org) |
+| Internet | Only to download Python the first time |
 
-4. Read the summary in the terminal.
-5. Open `output/daily_summary.txt` to see the saved report.
+---
 
-## Input file
-Open `data/tasks.csv` in Excel or another spreadsheet application. Each row represents one task. The `Status` column should contain `Completed` or `Pending`.
+## Step-by-Step: How to Run It
 
-## Try changing the data
-- Add another task row and run the program again.
-- Change a task from Pending to Completed.
-- Compare the summary before and after your change.
+| Step | What to Do |
+|------|------------|
+| 1 | Install Python from **python.org** if you don't have it. During install, tick the box **"Add Python to PATH"**. |
+| 2 | Open a **terminal** (Windows: *Command Prompt* / Mac: *Terminal*). |
+| 3 | Go into the project folder. Example: `cd Desktop\my-project` |
+| 4 | Create the folder `data` inside the project, and put your **`tasks.csv`** file inside it. |
+| 5 | Type this and press Enter: `python main.py` |
+| 6 | You will see the summary printed on screen, and a file called **`output/daily_summary.txt`** will appear. |
 
-## Important
-This is a learning prototype using fictional sample data. Do not use real customer, account, transaction, or confidential bank information.
+> If `python` doesn't work, try `python3 main.py`.
+
+---
+
+## What the Program Reads (Input)
+
+You give it **one file**: `data/tasks.csv`
+
+| Thing | Rule |
+|-------|------|
+| File name | Must be called `tasks.csv` |
+| Folder | Must be inside a folder called `data` |
+| Format | A normal spreadsheet saved as **CSV** (File → Save As → CSV in Excel) |
+| Must have a column named | `Status` |
+| Status values allowed | `Completed` or `Pending` (capital letters don't matter) |
+
+**Example of what your `tasks.csv` should look like:**
+
+```csv
+Task,Owner,Status
+Review reports,Alice,Completed
+Update inventory,Bob,Pending
+Call supplier,Carol,Completed
+Fix printer,Dan,Pending
