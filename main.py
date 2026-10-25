@@ -40,7 +40,7 @@ def main():
 
     print(summary)
 
-    # Step 4: Save the same summary to a text file.
+    # Step 4: Save the same summary to a text file.(Mock Database)
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(summary, encoding="utf-8")
     print(f"Summary saved to: {OUTPUT_FILE}")
